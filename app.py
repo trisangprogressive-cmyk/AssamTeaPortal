@@ -4,6 +4,7 @@ from config import Config
 from database.database import db
 from routes.traders import trader_bp
 from routes.search import search_bp
+import os
 
 from routes.home import home_bp
 
@@ -36,4 +37,5 @@ with app.app_context():
             print("Company :", t.company_name)
             print("=" * 80)    
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=False)
