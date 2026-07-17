@@ -1,0 +1,192 @@
+{% extends "base.html" %}
+
+{% block title %}Search Tea Traders{% endblock %}
+
+{% block content %}
+
+<div class="stats">
+
+    <div class="stat-card">
+
+        <h2>{{ results|length }}</h2>
+
+        <p>Businesses Found</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <h2>213</h2>
+
+        <p>Total Businesses</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <h2>Verified</h2>
+
+        <p>Directory</p>
+
+    </div>
+
+</div>
+
+<div class="hero-search">
+
+    <h1>Assam Tea Business Directory</h1>
+
+    <p>
+        Search Tea Estates, Tea Traders, Tea Retail Shops and Exporters across Assam
+    </p>
+
+    <form method="GET">
+
+    <input
+        type="text"
+        name="q"
+        placeholder="Search company..."
+        value="{{ query }}"
+    >
+
+    <select name="district">
+
+        <option value="">All Districts</option>
+
+        {% for d in districts %}
+
+        <option value="{{ d }}"
+        {% if district==d %}selected{% endif %}>
+            {{ d }}
+        </option>
+
+        {% endfor %}
+
+    </select>
+
+    <select name="category">
+
+        <option value="">All Categories</option>
+
+        {% for c in categories %}
+
+        <option value="{{ c }}"
+        {% if category==c %}selected{% endif %}>
+            {{ c }}
+        </option>
+
+        {% endfor %}
+
+    </select>
+
+    <button type="submit">
+
+        🔍 Search
+
+    </button>
+
+</form>
+
+</div>
+
+    <h5>
+        {{ results|length }} Result(s) Found
+    </h5>
+
+    <hr>
+
+    {% if results %}
+
+        {% for trader in results %}
+
+        <div class="business-card">
+
+    <div class="business-top">
+
+        <div class="company-icon">
+
+            🏢
+
+        </div>
+
+        <div class="company-info">
+
+            <h2>
+
+                <a href="{{ url_for('search.business_details', business_id=trader.id) }}">
+
+                    {{ trader.company_name }}
+
+                </a>
+
+            </h2>
+
+            <span class="category-badge">
+
+                {{ trader.business_category or "Tea Business" }}
+
+            </span>
+
+        </div>
+
+        {% if trader.verified %}
+
+        <span class="verified">
+
+            ✔ Verified
+
+        </span>
+
+        {% endif %}
+
+    </div>
+
+    <hr>
+
+    <div class="business-details">
+
+        <p>📍 <strong>District:</strong> {{ trader.district or "Not Available" }}</p>
+
+        <p>🏠 <strong>Address:</strong> {{ trader.address or "Not Available" }}</p>
+
+        <p>📞 <strong>Phone:</strong> {{ trader.phone or "Not Available" }}</p>
+
+        <p>✉ <strong>Email:</strong> {{ trader.email or "Not Available" }}</p>
+
+    </div>
+
+    <div class="card-buttons">
+
+        {% if trader.website %}
+
+        <a href="{{ trader.website }}" target="_blank" class="btn-website">
+
+            🌐 Website
+
+        </a>
+
+        {% endif %}
+
+        <a href="{{ url_for('search.business_details', business_id=trader.id) }}" class="btn-details">
+
+            View Details →
+
+        </a>
+
+    </div>
+
+</div>
+
+        {% endfor %}
+
+    {% else %}
+
+        <div class="alert alert-warning">
+            No traders found.
+        </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

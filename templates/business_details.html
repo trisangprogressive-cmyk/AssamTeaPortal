@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="details-card">
+
+    <h1>{{ trader.company_name }}</h1>
+
+    {% if trader.verified %}
+    <span class="verified">✔ Verified Business</span>
+    {% endif %}
+
+    <table>
+
+        <tr>
+            <td><strong>Category</strong></td>
+            <td>{{ trader.business_category or "Tea Business" }}</td>
+        </tr>
+
+        <tr>
+            <td><strong>District</strong></td>
+            <td>{{ trader.district or "Not Available" }}</td>
+        </tr>
+
+        <tr>
+            <td><strong>Address</strong></td>
+            <td>{{ trader.address or "Not Available" }}</td>
+        </tr>
+
+        <tr>
+            <td><strong>Phone</strong></td>
+            <td>{{ trader.phone or "Not Available" }}</td>
+        </tr>
+
+        <tr>
+            <td><strong>Email</strong></td>
+            <td>{{ trader.email or "Not Available" }}</td>
+        </tr>
+
+        <tr>
+            <td><strong>Website</strong></td>
+            <td>
+                {% if trader.website %}
+                <a href="{{ trader.website }}" target="_blank">
+                    {{ trader.website }}
+                </a>
+                {% else %}
+                Not Available
+                {% endif %}
+            </td>
+        </tr>
+
+    </table>
+
+    <br>
+
+    <a class="back-btn" href="{{ url_for('search.search') }}">
+        ← Back to Search
+    </a>
+
+</div>
+
+{% endblock %}

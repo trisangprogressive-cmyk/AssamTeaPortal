@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Tea Traders{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <h2>Tea Traders</h2>
+    <a href="/traders/add" class="btn btn-success mb-3">
++ Add Trader
+</a>
+
+    <table class="table table-bordered table-hover">
+
+        <thead class="table-success">
+
+            <tr>
+                <th>Company</th>
+                <th>District</th>
+                <th>Phone</th>
+                <th>Verified</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+        {% for trader in traders %}
+
+        <tr>
+
+            <td>{{ trader.company_name }}</td>
+            <td>{{ trader.district }}</td>
+            <td>{{ trader.phone }}</td>
+
+            <td>
+                {% if trader.verified %}
+                    ✅
+                {% else %}
+                    ❌
+                {% endif %}
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+        </tbody>
+
+    </table>
+
+</div>
+
+{% endblock %}

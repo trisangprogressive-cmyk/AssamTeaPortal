@@ -1,0 +1,130 @@
+<section class="hero-section">
+
+    <div class="hero-overlay">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-8">
+
+                    <span class="hero-badge">
+                        🌿 AI Powered Tea Business Directory
+                    </span>
+
+                    <h1 class="hero-title">
+                        Assam Tea Traders Information Portal
+                    </h1>
+
+                    <p class="hero-text">
+                        Search verified tea traders, wholesalers, exporters, manufacturers,
+                        tea gardens and retail shops across Assam.
+                    </p>
+
+                    <!-- SEARCH FORM -->
+                    <form
+                        action="{{ url_for('search.search') }}"
+                        method="GET"
+                        class="hero-search">
+
+                        <div class="input-group input-group-lg">
+
+                            <input
+                                type="text"
+                                name="q"
+                                class="form-control"
+                                placeholder="Search by company, district, category..."
+                                value="{{ request.args.get('q','') }}"
+                                required>
+
+                            <button
+                                type="submit"
+                                class="btn btn-success">
+
+                                <i class="fas fa-search"></i>
+                                Search
+
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                    <!-- QUICK SEARCH -->
+
+                    <div class="mt-4">
+
+                        <strong>Popular Searches :</strong>
+
+                        <div class="mt-2">
+
+                            <a href="/search?q=Jorhat"
+                               class="btn btn-outline-light btn-sm m-1">
+
+                                Jorhat
+
+                            </a>
+
+                            <a href="/search?q=Dibrugarh"
+                               class="btn btn-outline-light btn-sm m-1">
+
+                                Dibrugarh
+
+                            </a>
+
+                            <a href="/search?q=Tea+Trader"
+                               class="btn btn-outline-light btn-sm m-1">
+
+                                Tea Traders
+
+                            </a>
+
+                            <a href="/search?q=Tea+Garden"
+                               class="btn btn-outline-light btn-sm m-1">
+
+                                Tea Gardens
+
+                            </a>
+
+                            <a href="/search?q=Tea+Exporter"
+                               class="btn btn-outline-light btn-sm m-1">
+
+                                Exporters
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- BUTTONS -->
+
+                    <div class="hero-buttons mt-5">
+
+                        <a
+                            href="/search?q="
+                            class="btn btn-warning btn-lg">
+
+                            Browse Businesses
+
+                        </a>
+
+                        <a
+                            href="#"
+                            class="btn btn-outline-light btn-lg ms-3">
+
+                            AI Search
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

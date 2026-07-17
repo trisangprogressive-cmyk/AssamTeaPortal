@@ -1,0 +1,57 @@
+.custom-navbar{
+
+    background:#0b5d3b;
+
+    padding:12px 0;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+}
+
+.logo{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+}
+
+.logo-title{
+
+    color:white;
+
+    font-weight:700;
+
+}
+
+.logo-subtitle{
+
+    color:#d9d9d9;
+
+}
+
+.nav-link{
+
+    color:white !important;
+
+    margin-left:18px;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+.nav-link:hover{
+
+    color:#FFD54F !important;
+
+}
+
+.btn-warning{
+
+    font-weight:600;
+
+}

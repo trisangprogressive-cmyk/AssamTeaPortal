@@ -1,0 +1,82 @@
+.hero-section{
+
+    min-height:90vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1800&q=80");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+
+}
+
+.hero-overlay{
+
+    width:100%;
+    padding:120px 0;
+
+}
+
+.hero-badge{
+
+    background:#FFD54F;
+    color:#222;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    font-weight:600;
+}
+
+.hero-title{
+
+    color:white;
+
+    font-size:60px;
+
+    font-weight:700;
+
+    margin-top:25px;
+
+}
+
+.hero-text{
+
+    color:#f3f3f3;
+
+    font-size:21px;
+
+    margin:25px 0;
+
+    max-width:700px;
+
+}
+
+.hero-search{
+
+    display:flex;
+
+    gap:10px;
+
+    max-width:750px;
+
+}
+
+.hero-search input{
+
+    height:58px;
+
+    font-size:18px;
+
+}
+
+.hero-search button{
+
+    width:180px;
+
+}

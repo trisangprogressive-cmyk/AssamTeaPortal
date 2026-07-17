@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+<h2>Add Tea Trader</h2>
+
+<form method="POST">
+
+<div class="mb-3">
+<input class="form-control" name="company_name" placeholder="Company Name" required>
+</div>
+
+<div class="mb-3">
+<input class="form-control" name="district" placeholder="District" required>
+</div>
+
+<div class="mb-3">
+<input class="form-control" name="phone" placeholder="Phone">
+</div>
+
+<div class="mb-3">
+<textarea class="form-control" name="address" placeholder="Address"></textarea>
+</div>
+
+<button class="btn btn-success">
+Save Trader
+</button>
+
+</form>
+
+</div>
+
+{% endblock %}

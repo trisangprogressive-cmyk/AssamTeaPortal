@@ -1,0 +1,75 @@
+<nav class="navbar navbar-expand-lg custom-navbar sticky-top">
+
+    <div class="container">
+
+        <!-- Logo -->
+
+        <a class="navbar-brand d-flex align-items-center" href="/">
+
+            <img src="{{ url_for('static', filename='images/logo/logo.png') }}"
+                 class="logo">
+
+            <div class="ms-2">
+
+                <h5 class="mb-0 logo-title">
+                    Assam Tea Traders
+                </h5>
+
+                <small class="logo-subtitle">
+                    Information Portal
+                </small>
+
+            </div>
+
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainMenu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainMenu">
+
+            <ul class="navbar-nav ms-auto align-items-center">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="/">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Districts</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Tea Traders</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">AI Search</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Live Market</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="btn btn-warning ms-3 px-4">
+                        Admin Login
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>

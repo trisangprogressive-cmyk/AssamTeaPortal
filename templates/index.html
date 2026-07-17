@@ -1,0 +1,232 @@
+{% extends "base.html" %}
+
+{% block title %}
+Assam Tea Business Portal
+{% endblock %}
+
+{% block content %}
+
+<section class="hero-section">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <div class="hero-left">
+
+            <h1>🌿 Assam Tea Business Portal</h1>
+
+            <p>
+                Discover verified Tea Estates, Tea Traders, Tea Retail Shops,
+                Tea Exporters and Tea Companies across Assam.
+            </p>
+
+            <a href="{{ url_for('search.search') }}" class="explore-btn">
+                Explore Directory →
+            </a>
+
+        </div>
+
+        <div class="hero-right">
+
+            <div class="stat-card">
+
+                <h2>{{ total_traders }}</h2>
+
+                <span>Verified Businesses</span>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h2>25+</h2>
+
+                <span>Districts Covered</span>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h2>5+</h2>
+
+                <span>Business Categories</span>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h2>100%</h2>
+
+                <span>Search Enabled</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="feature-section">
+
+    <h2>Our Services</h2>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+
+            <div class="icon">🌱</div>
+
+            <h3>Tea Estates</h3>
+
+            <p>Find Tea Estates across Assam.</p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <div class="icon">🏪</div>
+
+            <h3>Tea Traders</h3>
+
+            <p>Wholesale & Retail Traders.</p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <div class="icon">🚢</div>
+
+            <h3>Exporters</h3>
+
+            <p>Verified Tea Export Companies.</p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <div class="icon">🔍</div>
+
+            <h3>Smart Search</h3>
+
+            <p>Search by Name, District & Category.</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="why-section">
+
+    <h2>Why Choose Our Portal?</h2>
+
+    <div class="why-grid">
+
+        <div class="why-card">
+
+            ✔ Verified Businesses
+
+        </div>
+
+        <div class="why-card">
+
+            ✔ Fast Search
+
+        </div>
+
+        <div class="why-card">
+
+            ✔ District Wise Directory
+
+        </div>
+
+        <div class="why-card">
+
+            ✔ Business Details
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="featured-section">
+
+    <div class="container">
+
+        <h2 class="section-title">
+
+            ⭐ Featured Tea Businesses
+
+        </h2>
+
+        <div class="featured-grid">
+
+            <div class="featured-card">
+
+                <div class="featured-icon">🏢</div>
+
+                <h3>Tea Estates</h3>
+
+                <p>
+
+                    Premium Tea Estates across Assam.
+
+                </p>
+
+            </div>
+
+            <div class="featured-card">
+
+                <div class="featured-icon">🍃</div>
+
+                <h3>Tea Traders</h3>
+
+                <p>
+
+                    Wholesale & Retail Tea Traders.
+
+                </p>
+
+            </div>
+
+            <div class="featured-card">
+
+                <div class="featured-icon">🚢</div>
+
+                <h3>Exporters</h3>
+
+                <p>
+
+                    Export Quality Assam Tea.
+
+                </p>
+
+            </div>
+
+            <div class="featured-card">
+
+                <div class="featured-icon">📦</div>
+
+                <h3>Tea Suppliers</h3>
+
+                <p>
+
+                    Packaging & Distribution.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
